@@ -22,6 +22,7 @@ a {
     color: var(--celeste);
     text-decoration: none;
 }
+
 .repo-link {
     color: var(--middleBlue);
 }
@@ -282,6 +283,9 @@ body.bgcolor {
     background-color: rgb(197, 243, 255, 0.85);
 }
 .profile-container {
+    background-image: url("../Img/Melbourne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
