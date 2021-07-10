@@ -273,7 +273,7 @@ body.bgcolor {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: rgb(197, 243, 255, 0.4);
+    background-color: rgb(197, 243, 255, 0.1);
 }
 .profile-container {
     background-image: url("../Img/Melbourne.jpg");
