@@ -319,6 +319,10 @@ body.bgcolor {
     font-size: larger;
 }
 
+.color {
+    display: none;
+}
+
 /* SECTION 2 --- ABOUT */
 
 .section2 {
