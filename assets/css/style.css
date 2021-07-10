@@ -405,7 +405,7 @@ body.bgcolor {
     padding: 10px;
     border: 2px var(--coolGrey) solid;
     border-radius: 3px;
-    margin: 20px 3rem;
+    margin: 20px 0;
     color: var(--celeste);
 }
 .project-title {
@@ -521,6 +521,9 @@ footer {
 
     .section-intro {
         margin: 1rem 3rem;
+    }
+    .card {
+        margin: 20px 3rem;
     }
 }
 
