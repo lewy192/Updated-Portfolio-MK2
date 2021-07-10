@@ -274,13 +274,14 @@ body.bgcolor {
     transition: 0.6s;
     color: var(--celeste);
 }
+
 .profile-img {
     /* opacity: 0.85; */
 
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: rgb(197, 243, 255, 0.85);
+    background-color: rgb(197, 243, 255, 0.4);
 }
 .profile-container {
     background-image: url("../Img/Melbourne.jpg");
@@ -291,6 +292,7 @@ body.bgcolor {
     align-items: center;
     margin: 8px 40px;
     max-height: max-content;
+    border-radius: 15px;
     /* display: inline-flex; */
 }
 
@@ -299,6 +301,14 @@ body.bgcolor {
     display: flex;
     flex-direction: column;
     height: auto;
+}
+
+.profile-description-container {
+    text-align: center;
+    background-color: rgb(55, 75, 74, 0.8);
+    border-radius: 10px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
 }
 .occupation,
 .location {
@@ -309,7 +319,6 @@ body.bgcolor {
     line-break: normal;
 }
 .name-head {
-    text-align: center;
     white-space: pre-line;
     font-weight: 300;
     font-size: 16px;
@@ -318,6 +327,10 @@ body.bgcolor {
 }
 .small-intro {
     margin-top: none;
+    font-size: 28px;
+}
+.location-intro {
+    font-size: larger;
 }
 
 /* SECTION 2 --- ABOUT */
@@ -432,47 +445,40 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    .section {
-        /* padding: 8px 2.5rem 2.5rem; */
-    }
     .name-head {
         font-size: 22px;
-        text-align: left;
         padding-right: 6px;
     }
-    /* .bottom-tag {
-        padding-left: 1rem;
-        /* margin-top: auto; */
-    /* margin-bottom: 0; */
-    /* }
-    .top-tag {
-        padding-left: 1rem;
-        margin-bottom: 20px;
-    } */
     .section1 {
         justify-content: center;
         margin-top: 2rem;
     }
     .color {
         width: 65%;
-        background-color: var(--celeste);
-        color: var(--darkSlateGrey);
-        height: 100%;
+        background-color: rgb(55, 75, 74, 0.7);
+        color: var(--celeste);
         z-index: 3;
         border-radius: 10px;
         box-sizing: border-box;
-        height: 100%;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+        /* padding: 20%; */
     }
     .profile-img-container {
         width: 35%;
         height: 100%;
-        background-color: var(--darkSlateGrey);
+        background-color: rgb(55, 75, 74, 0.9);
     }
     .profile-container {
+        background-image: url("../Img/Melbourne.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
         margin: 0;
         height: 100%;
         flex-direction: row;
         margin-left: 2rem;
+        align-items: stretch;
+
         /* background-color: var(--middleBlue); */
 
         /* background-color: var(--celeste); */
@@ -483,7 +489,13 @@ footer {
     .profile-img {
         height: 90%;
         width: 90%;
-        float: left;
+        /* float: left; */
+        align-self: center;
+        padding-top: 20px;
+        background-color: rgb(197, 243, 255, 0.85);
+    }
+    .profile-description-container {
+        background-color: transparent;
     }
 }
 
