@@ -438,6 +438,7 @@ footer {
     .name-head {
         font-size: 22px;
         text-align: left;
+        padding-right: 6px;
     }
     /* .bottom-tag {
         padding-left: 1rem;
@@ -459,6 +460,8 @@ footer {
         height: 100%;
         z-index: 3;
         border-radius: 10px;
+        box-sizing: border-box;
+        height: 100%;
     }
     .profile-img-container {
         width: 35%;
