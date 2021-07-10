@@ -269,6 +269,7 @@ body.bgcolor {
 }
 
 .profile-img {
+    margin: 5px 0;
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -281,7 +282,7 @@ body.bgcolor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8px 40px;
+    margin: 8px 20px;
     max-height: max-content;
     border-radius: 15px;
 }
@@ -289,6 +290,8 @@ body.bgcolor {
 .profile-img-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: rgb(55, 75, 74, 0.5);
     height: auto;
 }
 
@@ -426,10 +429,6 @@ footer {
 ::-webkit-scrollbar-thumb {
     background-color: var(--middleBlue);
     border-radius: 8px;
-}
-@media screen and (max-width: 768px) {
-    .profile-container {
-    }
 }
 
 @media screen and (min-width: 768px) {
