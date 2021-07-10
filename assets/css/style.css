@@ -230,12 +230,6 @@ body.bgcolor {
     flex-direction: row;
 }
 
-.about-desc {
-    text-align: center;
-    white-space: pre-line;
-    font-weight: 400;
-}
-
 .container-tag {
     margin: 10px 4px;
     font-size: 19px;
@@ -334,6 +328,21 @@ body.bgcolor {
     -webkit-transition: 1s;
     transition: 1s;
 }
+
+.about-desc {
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(55, 75, 74, 0.6);
+    padding: 10% 5px;
+}
+
+.about-container {
+    background-image: url("../Img/Hotham.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
 .section3 {
     -o-transition: 1.4s;
     -ms-transition: 1.4s;
@@ -396,7 +405,7 @@ body.bgcolor {
     padding: 10px;
     border: 2px var(--coolGrey) solid;
     border-radius: 3px;
-    margin: 20px 40px;
+    margin: 20px 30px;
     color: var(--celeste);
 }
 .project-title {
@@ -432,6 +441,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    /* SECTION 1 LARGER SCREENS */
     .name-head {
         font-size: 22px;
         padding-right: 6px;
@@ -478,7 +488,7 @@ footer {
         /* float: left; */
         align-self: center;
         padding-top: 20px;
-        background-color: rgb(197, 243, 255, 0.85);
+        background-color: rgb(197, 243, 255, 0.4);
     }
     .profile-description-container {
         background-color: transparent;
