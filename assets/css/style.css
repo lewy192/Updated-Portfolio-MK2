@@ -49,6 +49,7 @@ body.bgcolor {
     flex-direction: row;
     background-color: var(--darkSlateGrey);
     opacity: 0.7;
+    z-index: 100;
 }
 
 .list-item {
@@ -68,6 +69,7 @@ body.bgcolor {
     outline: none;
     height: 36px;
     width: 36px;
+    z-index: 100;
 }
 .burger-menu:hover div {
     animation: burgerChangeColorHover 4s linear infinite alternate;
@@ -287,6 +289,7 @@ body.bgcolor {
     align-items: center;
     background-color: rgb(55, 75, 74, 0.5);
     height: auto;
+    width: 100%;
 }
 
 .profile-description-container {
@@ -295,6 +298,7 @@ body.bgcolor {
     border-radius: 10px;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
+    width: 100%;
 }
 .occupation,
 .location {
@@ -305,7 +309,7 @@ body.bgcolor {
     line-break: normal;
 }
 .name-head {
-    white-space: pre-line;
+    /* white-space: pre-line; */
     font-weight: 300;
     font-size: 16px;
     margin-left: 15px;
@@ -498,6 +502,12 @@ footer {
         background-color: transparent;
     }
 
+    .type-writer {
+        font-size: 40px;
+        margin-top: auto;
+        text-align: center;
+    }
+
     /*SECTION 2 LARGER SCREENS  */
 
     .about-container {
@@ -521,6 +531,23 @@ footer {
         width: 30%;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
+    }
+
+    /* MISC */
+
+    .type-writer::after {
+        content: "|";
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
     }
 
     .section-intro {
