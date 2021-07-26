@@ -148,7 +148,7 @@ body.bgcolor {
     -moz-transform: translate(-5%);
     -webkit-transform: translate(-5%);
 
-    transform: translate(-5%);
+    transform: translate(-50% 50%);
 }
 
 .list-item1 {
@@ -190,7 +190,7 @@ body.bgcolor {
     -ms-transform: translate(0);
     -moz-transform: translate(0);
     -webkit-transform: translate(0);
-    transform: translate(0);
+    transform: translate(10%);
 }
 .list-item2.transform,
 .list-item3.transform,
@@ -248,7 +248,7 @@ body.bgcolor {
 .section {
     padding: 1rem;
     background-color: var(--darkSlateGrey);
-    max-width: 1000px;
+    /* max-width: 1000px; */
 }
 
 /* SECTION 1 -- PROFILE */
@@ -384,11 +384,11 @@ body.bgcolor {
 .section2.transform,
 .section3.transform,
 .section4.transform {
-    -webkit-transform: translate(-120%, 0%);
-    -moz-transform: translate(-120%, 0%);
-    -o-transform: translate(-120%, 0%);
-    -ms-transform: translate(-120%, 0%);
-    transform: translate(-120%, 0%);
+    -webkit-transform: translate(-100vw, 0%);
+    -moz-transform: translate(-100vw, 0%);
+    -o-transform: translate(-100vw, 0%);
+    -ms-transform: translate(-100vw, 0%);
+    transform: translate(-100vw, 0%);
 }
 .content.transform {
     background-color: #ffffff00;
@@ -671,6 +671,7 @@ footer {
     }
 
     .page-container {
+        /* TODO: */
         max-width: 1080px;
         align-self: center;
     }
