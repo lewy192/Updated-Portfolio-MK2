@@ -219,7 +219,7 @@ body.bgcolor {
 }
 .list-item {
     list-style: none;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     padding: 2rem;
     opacity: 0;
@@ -491,6 +491,12 @@ footer {
 ::-webkit-scrollbar-thumb {
     background-color: var(--middleBlue);
     border-radius: 8px;
+}
+
+@media screen and (min-width: 425px) {
+    .list-item {
+        font-size: 50px;
+    }
 }
 
 @media screen and (min-width: 768px) {
