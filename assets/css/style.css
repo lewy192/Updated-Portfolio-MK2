@@ -8,7 +8,6 @@
 
 *:root {
     --celeste: #c5f3ff;
-    --textColor: #ffe600;
     --middleBlue: #88d9e3;
     --coolGrey: #8b8bae;
     --feldgrau: #526760;
@@ -44,12 +43,13 @@ body.bgcolor {
     top: 0;
     color: var(--celeste);
     width: 100%;
-    height: 55px;
+    max-height: 55px;
+    max-width: 1080px;
     display: flex;
     flex-direction: row;
     background-color: var(--darkSlateGrey);
     opacity: 0.7;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .list-item {
@@ -61,15 +61,14 @@ body.bgcolor {
 
 .burger-menu {
     cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 3%;
-    background-color: var(--darkSlateGrey);
     border: none;
     outline: none;
     height: 36px;
     width: 36px;
     z-index: 100;
+    position: absolute;
+    right: 16px;
+    top: 6px;
 }
 .burger-menu:hover div {
     animation: burgerChangeColorHover 4s linear infinite alternate;
@@ -83,7 +82,7 @@ body.bgcolor {
     z-index: 999;
     height: 2px;
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
     transition: 0.4s;
 }
@@ -114,16 +113,15 @@ body.bgcolor {
     -moz-transform: rotate(45deg) translate(-7px, -7px);
     -o-transform: rotate(45deg) translate(-7px, -7px);
     -ms-transform: rotate(45deg) translate(-7px, -7px);
-    transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-9px, -9px);
 }
 
 .nav-bar {
-    transform: translate(100%);
+    transform: translate(120%);
     align-self: center;
     justify-self: center;
     width: 100%;
     padding: 0 5px;
-
     position: fixed;
     transition: 0.6s;
     top: 20%;
@@ -250,6 +248,7 @@ body.bgcolor {
 .section {
     padding: 1rem;
     background-color: var(--darkSlateGrey);
+    max-width: 1000px;
 }
 
 /* SECTION 1 -- PROFILE */
@@ -269,7 +268,7 @@ body.bgcolor {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: rgb(197, 243, 255, 0.1);
+    background-color: rgba(234, 197, 255, 0.1);
 }
 .profile-container {
     background-image: url("../Img/Melbourne.jpg");
@@ -348,9 +347,11 @@ body.bgcolor {
     background-image: url("../Img/Hotham.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 
     border-radius: 10px;
 }
+
 .section3 {
     -o-transition: 1.4s;
     -ms-transition: 1.4s;
@@ -358,6 +359,17 @@ body.bgcolor {
     -webkit-transition: 1.4s;
 
     transition: 1.4s;
+}
+
+.projects-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-bottom-tag {
+    margin-top: 1rem;
 }
 .section4 {
     -o-transition: 1.8s;
@@ -409,12 +421,14 @@ body.bgcolor {
     margin: 0;
     padding: 0;
 }
-.card {
-    padding: 10px;
+.card,
+.mini-card {
+    padding: 0.75rem;
     border: 2px var(--coolGrey) solid;
     border-radius: 3px;
     margin: 20px 0;
     color: var(--celeste);
+    height: 100%;
 }
 .project-title {
     margin-bottom: 7px;
@@ -422,10 +436,41 @@ body.bgcolor {
 .project-desc {
     margin-bottom: 7px;
 }
+.card:hover {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    transition: 350ms;
+}
+
+.card-techready:hover {
+    background-image: url(../Img/TechReady.png);
+    color: transparent;
+}
+.card-flowerpot:hover {
+    background-image: url(../Img/FLOWERPOT.png);
+    color: transparent;
+}
+.card-react:hover {
+    background-image: url(../Img/React.png);
+    color: transparent;
+}
+
+.project-photo {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
 
 .card-link {
     margin-left: 10px;
     color: var(--coolGrey);
+}
+
+.flowerpot-photo {
+    background-image: url(../Img/FLOWERPOT.png);
 }
 
 footer {
@@ -454,13 +499,31 @@ footer {
         font-size: 22px;
         padding-right: 6px;
     }
+
+    .card-techready:hover,
+    .card-flowerpot:hover,
+    .card-react:hover {
+        background-image: none;
+        color: inherit;
+    }
+
+    /* .side-navbar {
+        background-color: rgba(128, 128, 128, 0.26);
+
+    } */
+    .section {
+        margin-top: 2rem;
+    }
+    .section:hover {
+        transform: translateY(-2px);
+    }
     .section1 {
         justify-content: center;
         margin-top: 2rem;
     }
     .color {
         width: 65%;
-        background-color: rgb(55, 75, 74, 0.7);
+        background-color: rgba(107, 91, 61, 0.4);
         color: var(--celeste);
         z-index: 3;
         box-sizing: border-box;
@@ -474,7 +537,7 @@ footer {
     .profile-img-container {
         width: 35%;
         height: 100%;
-        background-color: rgb(55, 75, 74, 0.9);
+        background-color: #374b4ac5;
         border-top-left-radius: 13px;
         border-bottom-left-radius: 13px;
     }
@@ -496,7 +559,7 @@ footer {
         width: 90%;
         align-self: center;
         padding-top: 20px;
-        background-color: rgb(197, 243, 255, 0.4);
+        background-color: rgba(197, 243, 255, 0.26);
     }
     .profile-description-container {
         background-color: transparent;
@@ -505,7 +568,9 @@ footer {
     .type-writer {
         font-size: 40px;
         margin-top: auto;
+        margin-bottom: 2rem;
         text-align: center;
+        text-transform: capitalize;
     }
 
     /*SECTION 2 LARGER SCREENS  */
@@ -528,9 +593,74 @@ footer {
         background-image: url("../Img/Hotham.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
         width: 30%;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
+    }
+
+    /* SECTION 3 PROJECTS */
+
+    .card {
+        display: flex;
+        padding: 0;
+    }
+    .card-details-container {
+        padding: 0.75rem 0 0.75rem 0.75rem;
+        width: 60%;
+    }
+    .project-photo-container {
+        width: 40%;
+    }
+
+    .project-photo {
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* height: 100%; */
+        float: right;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        background-position: center right;
+    }
+    .tech-ready-photo {
+        background-image: url("../Img/TechReady.png");
+    }
+    .flowerpot-photo {
+        background-image: url(../Img/FLOWERPOT.png);
+    }
+    .react-photo {
+        background-image: url(../Img/React.png);
+    }
+
+    .mini-projects-container {
+        display: flex;
+        /* flex-direction: column; */
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+
+    .mini-projects-container > * {
+        flex: 1 1 45%;
+        /* max-width: 40%; */
+        margin: 1rem;
+        box-sizing: border-box;
+    }
+
+    .mini-card {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+    .mini-card:nth-child(odd) {
+        margin-left: 0;
+    }
+    .mini-card:nth-child(even) {
+        margin-right: 0;
+    }
+    .mini-card:last-child {
+        height: 200px;
+        margin: 1rem 0;
     }
 
     /* MISC */
@@ -538,6 +668,11 @@ footer {
     .type-writer::after {
         content: "|";
         animation: blink 1s infinite;
+    }
+
+    .page-container {
+        max-width: 1080px;
+        align-self: center;
     }
 
     @keyframes blink {
@@ -553,8 +688,11 @@ footer {
     .section-intro {
         margin: 1rem 3rem;
     }
-    .card {
-        margin: 20px 3rem;
+}
+
+@media screen and (min-width: 1040px) {
+    .burger-menu {
+        right: 60px;
     }
 }
 

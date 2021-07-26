@@ -10,7 +10,6 @@ const contentSections = document.querySelectorAll(".section");
 
 burgerButton.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("transformed");
-    console.log(e.currentTarget);
     transformations();
 });
 
